@@ -31,7 +31,7 @@ st.set_page_config(page_title = "AI-Powered Data Extraction and Automation")
 
 st.header("AI-Powered Data Extraction and Automation")
 input = st.text_input("Input Prompt: ", key= "input")
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", ])
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "webp", ])
 image = ""
 
 if uploaded_file is not None:
@@ -42,7 +42,7 @@ submit =  st.button("Extract now")
 
 input_prompt = """
 You are an expert in understanding invoices. We will upload a image as invoice
-and you will have to answer any question based on the uploaded invoice image
+and you will have to answer any question based on the uploaded invoice image. Extract key details such as invoice number, date, total amount, billing and shipping addresses, itemized list of products or services, and any applicable taxes or discounts. If the provided document is in some another language you should be capable of translating it into user desired language. 
 """
 
 if submit:
